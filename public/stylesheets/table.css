@@ -1,0 +1,53 @@
+/* TABLES */
+table {
+    border: 5px solid #54B336;
+    width: 770px;
+	 
+}
+tr {
+    border: 0;
+}
+td, th { 
+    font: 12px verdana, arial, helvetica, sans-serif;
+    line-height: 14px;
+    padding: 5px 6px;
+    text-align: center;
+    vertical-align: top;
+}
+th {
+    background: #fff url(../images/skin/shadow.jpg);
+    border: 3px solid #54B336;
+    color: #666;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 20px;
+    padding: 2px 6px;
+}
+td {
+	border: 1px solid #54B336;
+}
+th a:link, th a:visited, th a:hover {
+    color: #333;
+    display: block;
+    font-size: 10px;
+    text-decoration: none;
+    width: 100%;
+}
+th.asc a, th.desc a {
+    background-position: right;
+    background-repeat: no-repeat;
+}
+th.asc a {
+    background-image: url(../images/skin/sorted_asc.gif);
+}
+th.desc a {
+    background-image: url(../images/skin/sorted_desc.gif);
+}
+
+.odd {
+	background: #cccc99;
+}
+.even {
+    background: #ccff99;
+}
+

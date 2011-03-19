@@ -1,0 +1,41 @@
+#content {
+    width: 720px;
+    float: right;
+    text-align: center;
+    color:#4C4C4C;
+    background-color: #fff;
+}
+.label {
+    color: red;
+}
+.rjb-form fieldset {
+    background: #aaa;
+    width: 400px;
+}
+.rjb-form legend {
+    color: #dfd;
+    background: #141;
+    font-family: sans-serif;
+    padding: 0.2em 1em
+}
+.rjb-form label {
+    width: 15em;
+    float: left;
+    text-align: right;
+    padding-top: 0.5em;
+    margin-right: 0.1em;
+    display: block;
+}
+.rjb-form select, .rjb-form textarea, .rjb-form input {
+    margin-left: 0.5em;
+}
+.rjb-form .submit {
+    margin-left: 14em;
+}
+.rjb-form div {
+    margin: 0.5em 0;
+    
+}
+.rjb-form {
+    
+}

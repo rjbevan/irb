@@ -1,0 +1,15 @@
+<h1>Current Ratings</h1>
+<table>
+  <th><%= "Country" %> </th>
+  <th><%= "Rating" %> </th>
+  <th><%= "Rating date" %> </th>
+<tbody>
+  <% @c.each do |coun|%>
+    <tr class="<%= cycle('odd', 'even') %>">
+      <td><%= coun.name %></td>
+      <td><%= number_with_precision(coun.rating_current,:precision => 2) %></td>
+      <td><%= coun.date_current %></td>
+    </tr>
+  <% end %>
+</tbody>
+</table>

@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: Ruritania
+  rating_current: 80.555
+  date_current: 2011-02-16
+
+two:
+  name: Titipu
+  rating_current: 75.555
+  date_current: 2011-02-16

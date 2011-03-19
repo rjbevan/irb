@@ -1,0 +1,26 @@
+<div>
+  <h1>Administration Page</h1>
+  <p>The links on the left can:</p>
+  <p>Lead you to the <b>Home</b> page</p>
+  <p>or</p>
+  <p>Allow you to administer the Web pages.</p>
+  <hr></hr>
+</div>
+<div>
+  <h3>State of the next match is <b>"<%= @message %>"</b></h3>
+  <h4>Details of the next match:</h4>
+  <p>Home team - <b><%=  @ht %></b></p>
+  <p>Away team - <b><%=  @at %></b></p>
+  <p>Date of the match - <b><%=  @d %></b></p>
+  <hr></hr>
+</div>
+<div>
+  <ul class="links">
+    <% if @message == "No scores entered for the next match." %>
+      <li><%= link_to 'Enter scores', :controller => "admin", :action => "enter_score" %></li>
+     <% end  %>
+    <% if @smessage == "No more matches for which to enter results" %>
+      <li><%= link_to 'Enter matches', :controller => "admin", :action => "enter_match" %></li>
+    <% end  %>
+  </ul>
+</div>

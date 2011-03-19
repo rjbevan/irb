@@ -1,0 +1,41 @@
+<h1>Enter scores for the match</h1>
+
+<div class="rjb-form">
+  <% form_tag(:controller => :admin, :action => :score_save) do %>
+    <fieldset>
+      <legend>Enter scores for this match</legend>
+      <div>
+        <label for="tourname">Tournament name:</label>
+        <%= text_field_tag(:tourname, params[:tourname] , :size => 12, :value => @tournament.name) %>
+      </div>
+      <div>
+        <label for="date">Date of the match:</label>
+        <%= text_field_tag(:date, params[:date] , :size => 8, :value => @match.date_match) %>
+      </div>
+      <div>
+        <label for="hometeam">Home team:</label>
+        <%= text_field_tag(:hometeam, params[:hometeam] , :size => 8, :value => @match.home_team) %>
+      </div>
+      <div>
+        <label for="hpts">Home team points:</label>
+        <%= text_field_tag(:hpts, params[:hpts] , :size => 8, :value => @match.hpts) %>
+      </div>
+      <div>
+        <label for="awayteam">Away team:</label>
+        <%= text_field_tag(:awayteam, params[:awayteam] , :size => 8, :value => @match.away_team) %>
+      </div>
+      <div>
+        <label for="apts">Away team points:</label>
+
+        <%= text_field_tag(:apts, params[:apts] , :size => 8, :value => @match.apts) %>
+      </div>
+      <div>
+        <label for="result">Result:</label>
+        <%= select_tag(:result, options_for_select( @pres, params[:result])) %>
+      </div>
+      <div>
+        <%= submit_tag "Verify and Save" %>
+      </div>
+    </fieldset>
+  <% end %>
+</div>

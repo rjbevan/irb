@@ -1,0 +1,72 @@
+<h1>Rating of a match</h1>
+
+<div class="rjb-form">
+  <% form_tag(:controller => :admin, :action => :rate_save) do %>
+  <fieldset>
+    <legend>Rate the next match</legend>
+    <div>
+      <label for="tourname">Tournament name:</label>
+      <%= text_field_tag(:tourname, params[:tourname] , :size => 12, :value => @tournament.name) %>
+    </div>
+    <div>
+      <label for="rated">Is the match rated?:</label>
+      <%= text_field_tag(:rated, params[:rated] , :size => 8, :value => @match.rated) %>
+    </div>
+    <div>
+      <label for="played">Has the match been played?:</label>
+      <%= text_field_tag(:played, params[:played] , :size => 8, :value => @match.played) %>
+    </div>
+    <div>
+      <label for="date">Date of the match:</label>
+      <%= text_field_tag(:date, params[:date] , :size => 8, :value => @match.date_match) %>
+    </div>
+    <div>
+      <label for="hometeam">Home team:</label>
+      <%= text_field_tag(:hometeam, params[:hometeam] , :size => 8, :value => @match.home_team) %>
+    </div>
+    <div>
+      <label for="hpts">Home team points:</label>
+      <%= text_field_tag(:hpts, params[:hpts] , :size => 8, :value => @match.hpts) %>
+    </div>
+    <div>
+      <label for="awayteam">Away team:</label>
+      <%= text_field_tag(:awayteam, params[:awayteam] , :size => 8, :value => @match.away_team) %>
+    </div>
+    <div>
+      <label for="apts">Away team points:</label>
+      <%= text_field_tag(:apts, params[:apts] , :size => 8, :value => @match.apts) %>
+    </div>
+    <div>
+      <label for="margin">Margin:</label>
+      <%= text_field_tag(:margin, params[:margin] , :size => 8, :value => @match.hpts - @match.apts) %>
+    </div>
+    <div>
+      <label for="result">Result:</label>
+      <%= text_field_tag(:result, params[:result] , :size => 8, :value => @match.result) %>
+    </div>
+    <div>
+      <label for="hrc">Current rating (Home team):</label>
+      <%= text_field_tag(:hrc, params[:hrc] , :size => 8, :value => @hrc) %>
+    </div>
+    <div>
+      <label for="arc">Current rating (Away team):</label>
+      <%= text_field_tag(:arc, params[:arc] , :size => 8, :value => @arc) %>
+    </div>
+    <div>
+      <label for="ratechange">Change in rate:</label>
+      <%= text_field_tag(:ratechange, params[:ratechange] , :size => 8, :value => number_with_precision(@change, :precision => 3)) %>
+    </div>
+    <div>
+      <label for="nhr">New rating (Home team):</label>
+      <%= text_field_tag(:nhr, params[:nhr] , :size => 8, :value => number_with_precision(@nhr, :precision => 3)) %>
+    </div>
+    <div>
+      <label for="nar">New rating (Away team):</label>
+      <%= text_field_tag(:nar, params[:nar] , :size => 8, :value => number_with_precision(@nar, :precision => 3)) %>
+    </div>
+    <div>
+      <%= submit_tag "Verify and Save" %>
+    </div>
+  </fieldset>
+ <% end %>
+</div>

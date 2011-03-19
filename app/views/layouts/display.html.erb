@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <title>Information</title>
+    <%= stylesheet_link_tag "rjb", "table", :media => "all" %>
+    <link rel="icon" href="/images/favicon.ico" type="image/ico" />
+  </head>
+  <body id="store">
+    <div id="banner">
+      <%= image_tag("logo1.png") %>
+      <%= @page_title || "Information - Rugby Tournaments" %>
+    </div>
+    <div id="columns">
+      <div id="side">
+        &nbsp;<%= link_to 'Home', :action => "index" %><br />
+        &nbsp;&nbsp;&nbsp;<%= link_to 'Six Nations 2011', :action => "table6nat11" %><br />
+        &nbsp;&nbsp;&nbsp;<%= link_to 'Current Rating', :action => "current_rating" %><br />
+        <br />
+        &nbsp;<%= link_to 'Admin', :controller => "admin", :action => "index" %><br />
+     </div>
+      <div id="main">
+        <%= yield :layout %>
+      </div>
+    </div>
+  </body>
+</html>

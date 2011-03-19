@@ -1,0 +1,25 @@
+<h1>Enter Match details</h1>
+
+<div class="rjb-form">
+  <% form_tag(:controller => :admin, :action => :enter_match) do %>
+    <fieldset>
+      <legend>Enter Match details</legend>
+      <div>
+        <label for="home_team">Home team name:</label>
+        <%= text_field_tag(:home_team, params[:home_team] , :size => 12) %>
+      </div>
+      <div>
+        <label for="away_team">Away team name:</label>
+        <%= text_field_tag(:away_team, params[:away_team] , :size => 12) %>
+      </div>
+
+      <div>
+        <label for="date">Date of the match:</label>
+        <%= text_field_tag(:date_match, params[:date] , :size => 12) %>
+      </div>
+      <div>
+        <%= submit_tag "Verify and Save" %>
+      </div>
+    </fieldset>
+  <% end %>
+</div>

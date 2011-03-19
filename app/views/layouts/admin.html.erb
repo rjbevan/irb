@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <title>Administration</title>
+    <%= stylesheet_link_tag "rjb", "table", "form", :media => "all" %>
+    <link rel="icon" href="/images/favicon.ico" type="image/ico" />
+  </head>
+  <body id="store">
+    <div id="banner">
+      <%= image_tag("logo1.png") %>
+      <%= @page_title || "Administrationion - Rugby Tournaments" %>
+    </div>
+    <div id="columns">
+      <div id="side">
+        &nbsp;<%= link_to 'Admin', :action => "index" %><br />
+        &nbsp;&nbsp;&nbsp;<%= link_to 'Rate Match', :action => "rate_match" %><br />
+        <br />&nbsp;<%= link_to 'Home', :controller => "display", :action => "index" %><br />
+     </div>
+      <div id="main">
+        <% if flash[:notice] -%>
+          <div id="notice"><%= flash[:notice] %></div>
+        <% end -%>
+        <%= yield :layout %>
+      </div>
+    </div>
+  </body>
+</html>

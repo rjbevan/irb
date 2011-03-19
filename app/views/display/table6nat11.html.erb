@@ -1,0 +1,27 @@
+<h1>Championship 2011</h1>
+<table>
+  <th><%= "Country" %> </th>
+  <th><%= "P" %> </th>
+  <th><%= "W" %> </th>
+  <th><%= "L" %> </th>
+  <th><%= "D" %> </th>
+  <th><%= "F" %> </th>
+  <th><%= "A" %> </th>
+  <th><%= "Diff" %> </th>
+  <th><%= "Points" %> </th>
+<tbody>
+  <% @sixnat.each do |sn|%>
+    <tr class="<%= cycle('odd', 'even') %>">
+      <td><%= sn[8] %></td>
+      <td><%= sn[2] %></td>
+      <td><%= sn[3] %></td>
+      <td><%= sn[4] %></td>
+      <td><%= sn[5] %></td>
+      <td><%= sn[6] %></td>
+      <td><%= sn[7] %></td>
+      <td><%= sn[1] %></td>
+      <td><%= sn[0] %></td>
+    </tr>
+  <% end %>
+</tbody>
+</table>

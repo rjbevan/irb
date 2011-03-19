@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  rate: 80.125
+  date: 2011-02-10
+  country: Ruritania
+
+two:
+  rate: 76.125
+  date: 2011-02-10
+  country: Titipu
